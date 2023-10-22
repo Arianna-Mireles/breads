@@ -12,10 +12,9 @@ breads.get('/', (req, res) => {
   // res.send(Bread)
 })
 
-
 // SHOW
-breads.get('/:arrayIndex', (req, res) => {
-    res.send(Bread[req.params.arrayIndex])
+breads.get('/0', (req, res) => {
+    res.send(Bread[0])
 })
   
 module.exports = breads
