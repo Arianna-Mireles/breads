@@ -13,8 +13,8 @@ breads.get('/', (req, res) => {
 })
 
 // SHOW
-breads.get('/0', (req, res) => {
-    res.send(Bread[0])
+breads.get('/:arrayIndex', (req, res) => {
+    res.send(Bread[req.params.arrayIndex])
 })
   
 module.exports = breads
