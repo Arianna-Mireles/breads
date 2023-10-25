@@ -16,6 +16,11 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.get('/', (req, res) => {
     res.send('Welcome to an Awesome App about Breads')
 })
+
+// 404 Page
+app.get('*', (req, res) => {
+  res.send('404')
+})
   
 // Breads
 const breadsController = require('./controllers/breads-controller.js')
